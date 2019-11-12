@@ -3,11 +3,22 @@
   padding: 0;
 }
 
-.nav {
-  width: 100%;
+header {
+  background-image: url("../background.jpg");
+  background-size: cover;
+  height: 555px;
+  position: relative;
+  background-position-x: center;
 }
 
-p {
+header .slogan {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.text {
   text-align: justify;
 }
 
@@ -20,14 +31,19 @@ p {
   width: 100%;
 }
 
+.photos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media screen and (min-width: 420px) {
   .inner {
     width: 420px;
     margin: 0 auto;
-  }
-  .photos {
-    -ms-flex-order: 4;
-        order: 4;
   }
 }
 
@@ -35,23 +51,12 @@ p {
   .inner {
     width: 768px;
   }
-  .photos {
-    -ms-flex-order: 4;
-        order: 4;
-  }
 }
 
 @media screen and (min-width: 1280px) {
   .inner {
     width: 1280px;
   }
-}
-
-.photos {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
 }
 
 .presentation {
@@ -62,17 +67,32 @@ p {
   width: 100%;
 }
 
-.presentation .logo {
+.presentation .presentation-logo {
   width: 50%;
 }
 
-.presentation .bouton {
+.presentation .presentation-logo .logo {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.presentation .presentation-bouton {
   width: 50%;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.presentation .presentation-bouton .bouton {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .articles {
   border-radius: 50%;
-  width: 30%;
 }
 
 .titre {
