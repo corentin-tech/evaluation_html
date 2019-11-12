@@ -1,50 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .nav {
   width: 100%;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 p {
-  display: -ms-flexbox;
-  display: flex;
   text-align: justify;
 }
 
-.logo {
-  display: -ms-flexbox;
-  display: flex;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .inner {
   width: 100%;
 }
 
-.lesarticles {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 420px) {
+  .inner {
+    width: 420px;
+    margin: 0 auto;
+  }
+  .photos {
+    -ms-flex-order: 4;
+        order: 4;
+  }
 }
 
-.lesarticles > div {
+@media screen and (min-width: 768px) {
+  .inner {
+    width: 768px;
+  }
+  .photos {
+    -ms-flex-order: 4;
+        order: 4;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1280px;
+  }
+}
+
+.photos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.presentation {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+}
+
+.presentation .logo {
+  width: 50%;
+}
+
+.presentation .bouton {
   width: 50%;
 }
 
 .articles {
   border-radius: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  width: 30%;
 }
 
 .titre {
   text-align: center;
   font-weight: bold;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
 }
 
 .text {
